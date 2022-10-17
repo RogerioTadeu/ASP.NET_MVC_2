@@ -1,0 +1,20 @@
+﻿<div class="text-center">
+    <h1 class="display-4">Página Inicial</h1>
+    @*<br />*@
+    <h2 class="display-4">Seja Bem Vindo</h2>
+    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+</div>
+<body>
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li style="display:inline">@Html.ActionLink("BL´s", "BLIndex", "BL")</li>
+            <li style="display:inline">     |     </li>
+            <li style="display:inline">@Html.ActionLink("Containers", "ContainerIndex", "Container")</li>
+
+        </ul>
+        @*<h3 class="muted-text">Caelum Estoque</h3>*@
+    </div>
+    @*<div>
+            @RenderBody()
+        </div>*@
+</body>

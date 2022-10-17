@@ -1,0 +1,47 @@
+﻿<body>
+    <div class="header">
+
+        <ul class="nav nav-pills pull-right">
+            <li style="display:inline">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li style="display:inline">     |     </li>
+            <li style="display:inline">@Html.ActionLink("BL", "BLIndex", "BL")</li>
+            @*<li style="display:inline">     |     </li>
+            <li style="display:inline">@Html.ActionLink("Containers", "ContainerIndex", "Container")</li>*@
+            @*<li>@Html.ActionLink("Adicionar Container", "ContainerForm", "Container")</li>*@
+        </ul>
+        <ul class="nav nav-pills pull-right">
+            <li style="display:inline">@Html.ActionLink("Adicionar Container", "ContainerForm", "Container")</li>
+            <li style="display:inline">     |     </li>
+            <li style="display:inline">@Html.ActionLink("Pesquisa Container", "ContainerPesquisa", "Container")</li>
+        </ul>
+
+            <h3 class="muted-text">Lista de Containers</h3>
+
+    </div>
+    <table class="table table-hover">
+
+        <thead>
+            <tr>
+                <th>Numero  </th>
+                <th>    |   </th>
+                <th>  Tipo  </th>
+                <th>    |   </th>
+                <th>  Tamanho</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var produto in ViewBag.Container)
+            {
+            <tr>
+                <td>@produto.Numero</td>
+                <th>    |   </th>
+                <td>@produto.Tipo</td>
+                <th>    |   </th>
+                <td>@produto.Tamanho</td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</body>

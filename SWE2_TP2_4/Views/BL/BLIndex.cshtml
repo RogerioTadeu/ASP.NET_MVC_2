@@ -1,0 +1,52 @@
+﻿<body>
+    <div class="header">
+
+        <ul class="nav nav-pills pull-right">
+            <li style="display:inline">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li style="display:inline">     |     </li>
+            <li style="display:inline">@Html.ActionLink("Containers", "ContainerIndex", "Container")</li>
+            @*<li>@Html.ActionLink("Adicionar BL", "BLForm", "BL")</li>*@
+        </ul>
+        <ul class="nav nav-pills pull-right">
+            <li style="display:inline">@Html.ActionLink("Adicionar BL", "BLForm", "BL")</li>
+            <li style="display:inline">     |     </li>
+            <li style="display:inline">@Html.ActionLink("Pesquisa BL", "BLPesquisa", "BL")</li>
+
+        </ul>
+            <h3 class="muted-text">Lista de BL´s</h3>
+
+    </div>
+    <table class="table table-hover">
+
+        <thead>
+            <tr>
+                <th>Numero </th>
+                <th>    |   </th>
+                <th>  Consignee  </th>
+                <th>    |   </th>
+                <th>  Navio</th>
+                <th>    |   </th>
+                <th>  Container  </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var produto in ViewBag.BL)
+            {
+
+            <tr>
+
+                <td>@produto.Numero</td>
+                <th>    |   </th>
+                <td>@produto.Consignee</td>
+                <th>    |   </th>
+                <td>@produto.Navio</td>
+                <th>    |   </th>
+                <td>@produto.ContainerId</td>
+
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</body>

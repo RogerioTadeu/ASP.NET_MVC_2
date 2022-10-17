@@ -1,0 +1,32 @@
+﻿<html>
+<body>
+    <div class="header">
+
+        <ul class="nav nav-pills pull-right">
+            <li style="display:inline">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li style="display:inline">     |     </li>
+            <li style="display:inline">@Html.ActionLink("BL", "BLIndex", "BL")</li>
+            <li style="display:inline">     |     </li>
+            <li style="display:inline">@Html.ActionLink("Containers", "ContainerIndex", "Container")</li>
+            @*<li>@Html.ActionLink("Adicionar Container", "ContainerForm", "Container")</li>*@
+        </ul>
+        <ul class="nav nav-pills pull-right">
+            <li style="display:inline">@Html.ActionLink("Adicionar BL", "BLForm", "BL")</li>
+            </ul>
+
+        <h3 class="muted-text">Lista de BL</h3>
+
+    </div>
+    <form action="/BL/Pesquisa" method="post">
+        <ul>
+            <li>
+                <label for="Id">Id:</label>
+                <input name="Id" id="Id" />
+            </li>
+            <li>
+                <input type="submit" value="Buscar" />
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
